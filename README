@@ -8,3 +8,7 @@ Cách làm:
 
 3. Chạy unsegmented.sh hoặc segmented.sh để tạo mô hình 5-gram và tính xác suất logarit hóa của bộ ngữ liệu kiểm thử. Quá trình này sẽ tạo ra các tệp *.arpa và *.binary có thể được sử dụng vào việc khác.
 
+4. Tính perplexity dựa vào các đại lượng đã in ra màn hình. Lưu ý rằng giá trị log được tính theo cơ số tự nhiên.
+
+perplexity theo câu = e^(- xs logarit / số câu)
+perplexity theo từ = e^(- xs logarit /  số từ)
