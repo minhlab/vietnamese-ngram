@@ -1,0 +1,10 @@
+Thí nghiệm đo perplexity của mô hình n-gram cho tiếng Việt. Thí nghiệm này sử dụng thư viện berkeleylm và cần có Java để chạy.
+
+Cách làm:
+
+1. Truyền địa chỉ dữ liệu bằng chép tệp env.sh.sample thành env.sh và sửa nội dung cho phù hợp.
+
+2. Chạy fix-corpora.sh để chỉnh lại định dạng dữ liệu cho phù hợp với yêu cầu của berkeleylm. *Lưu ý*: bước này sẽ thay đổi vĩnh viễn các tệp trong ngữ liệu, bạn nên sao lưu trước khi thực hiện.
+
+3. Chạy unsegmented.sh hoặc segmented.sh để tạo mô hình 5-gram và tính xác suất logarit hóa của bộ ngữ liệu kiểm thử. Quá trình này sẽ tạo ra các tệp *.arpa và *.binary có thể được sử dụng vào việc khác.
+
