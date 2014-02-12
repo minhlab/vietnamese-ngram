@@ -19,4 +19,4 @@ Cách 2 (dùng SRILM):
 
 2. Xem bước 2 của cách 1
 
-3. unsegmented.srilm.sh hoặc segmented.srilm.sh tương tự bước 3 ở trên. Kết quả gồm xác suất log, perplexity trong các trường hợp tính đến ký tự phân tách câu (ppl) và không tính (ppl1).
+3. unsegmented.srilm.sh hoặc segmented.srilm.sh tương tự bước 3 ở trên. Kết quả gồm xác suất log, perplexity theo từ trong các trường hợp tính đến ký tự phân tách câu (ppl) và không tính (ppl1).
