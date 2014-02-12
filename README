@@ -1,6 +1,6 @@
 Thí nghiệm đo perplexity của mô hình n-gram cho tiếng Việt. Thí nghiệm này sử dụng thư viện berkeleylm và cần có Java để chạy.
 
-Cách làm:
+Cách 1 (dùng BerkeleyLM):
 
 1. Truyền địa chỉ dữ liệu bằng chép tệp env.sh.sample thành env.sh và sửa nội dung cho phù hợp.
 
@@ -8,7 +8,15 @@ Cách làm:
 
 3. Chạy unsegmented.sh hoặc segmented.sh để tạo mô hình 5-gram và tính xác suất logarit hóa của bộ ngữ liệu kiểm thử. Quá trình này sẽ tạo ra các tệp *.arpa và *.binary có thể được sử dụng vào việc khác.
 
-4. Tính perplexity dựa vào các đại lượng đã in ra màn hình. Lưu ý rằng giá trị log được tính theo cơ số tự nhiên.
+4. Tính perplexity dựa vào các đại lượng đã in ra màn hình. Lưu ý rằng giá trị log được tính theo cơ số 10.
 
-perplexity theo câu = e^(- xs logarit / số câu)
-perplexity theo từ = e^(- xs logarit /  số từ)
+perplexity theo câu = 10^(- xs logarit / số câu)
+perplexity theo từ = 10^(- xs logarit /  số từ)
+
+Cách 2 (dùng SRILM):
+
+1. Cài đặt theo hướng dẫn: http://www.speech.sri.com/projects/srilm/docs/INSTALL
+
+2. Xem bước 2 của cách 1
+
+3. unsegmented.srilm.sh hoặc segmented.srilm.sh tương tự bước 3 ở trên. Kết quả gồm xác suất log, perplexity trong các trường hợp tính đến ký tự phân tách câu (ppl) và không tính (ppl1).
